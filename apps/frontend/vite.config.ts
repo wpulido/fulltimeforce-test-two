@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       'api/commits': {
-        target: 'http://localhost:3000',
+        target: process.env.NODE_ENV === "dev" ? 'http://localhost:3000' : 'https://serene-douhua-668e2b.netlify.app/',
         changeOrigin: true,
       }
     }
