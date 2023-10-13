@@ -23,7 +23,7 @@
   <div class="container mx-auto">
     <div class="text-center mt-10">
       <h1 class="font-semibold text-[30px] lg:text-lg">Git repository commits app</h1>
-      <p class="mt-5 text-sm lg:text-lg font-medium">This app shows all commits made to <a target="_blank" rel="noopener noreferrer" class="text-black underline hover:text-black" href="https://github.com/wpulido/fulltimeforce-test-two">this</a> repository.</p>
+      <p class="mt-5 text-sm lg:text-lg font-medium">This app shows all commits made to <a target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-white" href="https://github.com/wpulido/fulltimeforce-test-two">this</a> repository.</p>
     </div>
 
     <div id="list" class="flex flex-col gap-4 mt-10 px-3 lg:px-0">
@@ -37,10 +37,11 @@
           <CommitBlock {commit} />
         {/each}
       {:else if error}
-        <p>{error.message}</p>
+        <p class="text-semibold text-md text-white text-center">{error.message}</p>
+      {:else}
+        <p class="text-semibold text-md text-white text-center">No commits to show at the moment.</p>
       {/if}
       <!-- {/* in case we're not receiving any data, we display a fallback message, to let the user know we don't have any data to show. */} -->
-      <!-- <p className="text-semibold text-md text-black text-center">No commits to show.</p> -->
     </div>
   </div>
 </main>
