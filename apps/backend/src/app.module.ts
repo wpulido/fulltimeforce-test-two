@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { OctokitModule } from 'nestjs-octokit';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -11,6 +12,9 @@ import { OctokitModule } from 'nestjs-octokit';
       rootPath: join(__dirname, '../../', 'frontend/dist'),
     }),
     OctokitModule.forRoot({
+      isGlobal: true,
+    }),
+    ConfigModule.forRoot({
       isGlobal: true,
     }),
   ],
