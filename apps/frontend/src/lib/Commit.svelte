@@ -14,7 +14,7 @@
 <div class="bg-inherit rounded-lg p-5 shadow-2xl flex justify-between items-center mb-10">
   <div>
     <a href={commit.html_url} target="_blank" rel="noopener noreferrer">
-      <h2 class="font-semibold text-sm overflow-hidden text-ellipsis whitespace-nowrap">{commit.commit.message}</h2>
+      <h2 class="font-semibold text-sm mb-3">{commit.commit.message.length > 60 ? `${commit.commit.message.slice(0, 60)}...` : commit.commit.message}</h2>
     </a>
 
     <p class="font-medium text-xs">{commit.commit.author.name}</p>
