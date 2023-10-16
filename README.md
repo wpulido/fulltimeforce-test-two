@@ -32,6 +32,14 @@ NODE VERSION USED FOR THIS PROJECT: v18.17.0 (NPM v9.6.7)
 
 `npm install`
 
+4. Create a .env file in the root directory of this repository with the following variables:
+
+- NODE_ENV
+- GITHUB_USER
+- GITHUB_REPO
+
+Don't worry about any extra configuration with this, just adding the .env file and adding the three variables will do just fine.
+
 ## Usage
 
 To use this project, follow these instructions:
