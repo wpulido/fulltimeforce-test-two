@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "start": "node apps/backend/dist/main.js",
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev",
+    "start": "dotenv -- node apps/backend/dist/main.js",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -33,6 +33,7 @@
     "turbo": "^1.10.15"
   },
   "dependencies": {
-    "concurrently": "^8.2.1"
+    "concurrently": "^8.2.1",
+    "dotenv-cli": "^7.3.0"
   }
 }

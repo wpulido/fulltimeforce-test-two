@@ -10,10 +10,12 @@
     try {
       const response = await fetch("/api/commits");
       if (!response.ok) {
+        console.log(response);
         throw new Error("The request failed");
       }
       data = await response.json();
     } catch (err) {
+      console.log(err);
       error = err;
     }
   });
